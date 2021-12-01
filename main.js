@@ -3,6 +3,8 @@
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 const links = document.querySelectorAll('nav ul li a')
+const header = document.querySelector("#header")
+const navHeight = header.offsetHeight
 
 /* abre e fecha o menu toggle */
 for (const element of toggle) {
@@ -19,4 +21,14 @@ for (const link of links) {
     })
 }
 
+/* mudar o Header da pagina quando fizer scroll */
+window.addEventListener('scroll', function(){
+    if(window.scrollY >= navHeight) {
+    // scroll e maior que a altura do header
+    header.classList.add('scroll')
+    } else {
+    // scroll e MENOR que a altura do header
+    header.classList.remove('scroll')
+    }
+})
 
