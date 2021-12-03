@@ -32,3 +32,13 @@ window.addEventListener('scroll', function(){
     }
 })
 
+/* Testimonials slider swiper */
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    mousewheel: true,
+    keyboard: true
+})
+
