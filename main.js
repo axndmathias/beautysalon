@@ -46,9 +46,9 @@ scrollReveal.reveal(
 #home .image, #home .text,
 #about .image, #about .text,
 #services header, #services .card,
-#testimonials header, #testimonials .testimonials
-#contact .text, #contact .links
-footer .brans, footer .social
+#testimonials header, #testimonials .testimonials,
+#contact .text, #contact .links,
+footer .brand, footer .social
 `, 
 {
 interval: 100
@@ -72,7 +72,7 @@ function changeHeaderWHenScroll(){
 
 /* botão voltar para o topo */
 function backToTop(){
-    const backToTopButton = document.querySelector('back-to-top')
+    const backToTopButton = document.querySelector('.back-to-top')
     if(window.scrollY >= 560) {
         backToTopButton.classList.add('show')
     } else {
