@@ -516,7 +516,7 @@ footer .social a:hover {
   transform: translateY(0);
 }
 
-/* Responsivo */
+/* Media Queries */
 
 /* extra large devices: 1200 >*/
 @media (min-width: 1200px) {
@@ -531,8 +531,20 @@ footer .social a:hover {
     padding: 10rem 0;
   }
 
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .button {
     height: 3.125rem;
+  }
+  /* layout */
+  main {
+    margin-top: var(--header-height);
   }
 
   /* navigation */
@@ -572,8 +584,26 @@ footer .social a:hover {
     text-align: left;
   }
 
-  main {
-    margin-top: var(--header-height);
+  /* about */
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+
+  /* services */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* testimonials */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /* large devices: 1023 >*/
