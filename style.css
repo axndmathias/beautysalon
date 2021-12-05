@@ -168,7 +168,8 @@ nav ul li a {
   position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: var(--base-color);
 }
 
@@ -185,7 +186,8 @@ nav ul li a::after {
   transition: width 0.2s;
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
   width: 100%;
 }
 
@@ -562,6 +564,12 @@ footer .social a:hover {
 
   nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
   }
 
   nav .icon-menu {
@@ -615,32 +623,30 @@ footer .social a:hover {
 
   #contact .text {
     max-width: 25rem;
-}
+  }
 
+  /* footer */
+  footer .section {
+    padding: 3.75rem 0;
+  }
 
-/* footer */
-footer .section {
-  padding: 3.75rem 0;
-}
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-footer .container{
-grid-auto-flow: column;
-align-items: center;
-justify-content: space-between;
-}
+  footer .logo {
+    font-size: 2.25rem;
+  }
 
-footer .logo{
-  font-size: 2.25rem;
-}
-
-
-/* large devices: 1023 >*/
-/* large devices: 992 >*/
-@media (min-width: 992px) {
-  :root {
-    --title-font-size: 2.25rem;
-    --subtitle-font-size: 1.125rem;
+  /* large devices: 1023 >*/
+  /* large devices: 992 >*/
+  @media (min-width: 992px) {
+    :root {
+      --title-font-size: 2.25rem;
+      --subtitle-font-size: 1.125rem;
+    }
   }
 }
-
 /* medium devices: 767 >*/
